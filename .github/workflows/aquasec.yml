@@ -2,7 +2,7 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   checkout:
     name: Checkout
@@ -22,7 +22,6 @@ jobs:
           security-checks: 'vuln,config,secret'
           hide-progress: false
           format: 'table'
-          severitites: 'MEDIUM'
         env:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
